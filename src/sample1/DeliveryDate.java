@@ -48,25 +48,16 @@ public class DeliveryDate {
 	
 	// 月末か判定
 	private boolean isEndOfMonth(int day) {
-		if (day >= 25) {
-			return true;
-		} 
-		return false;
+		return day >= 25;
 	}
 	
 	// 年末か判定
 	private boolean isEndOfYear(Month month, int day) {
-		if (month.equals(Month.DECEMBER) && day >= 2) {
-			return true;
-		} 
-		return false;
+		return month.equals(Month.DECEMBER) && day >= 2;
 	}
 	
 	// 閏年か判定
 	private boolean isLeapYear(int year) {
-		if(year%4 == 0) {
-			return true;
-		}
-		return false;
+		return (year % 4) == 0;
 	}
 }
