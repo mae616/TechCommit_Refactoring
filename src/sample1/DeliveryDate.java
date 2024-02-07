@@ -53,7 +53,7 @@ public class DeliveryDate {
 	
 	// 年末か判定
 	private boolean isEndOfYear(Month month, int day) {
-		return month.equals(Month.DECEMBER) && day >= 2;
+		return month.equals(Month.DECEMBER) && day >= 20;
 	}
 	
 	// 閏年か判定
