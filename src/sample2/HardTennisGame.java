@@ -34,8 +34,7 @@ public class HardTennisGame extends TennisGame {
         
         }else {
 
-        	BiFunction<Player, Player, String> getGamScoreName = (Player argPlayer1, Player argPlayer2) -> 
-        													this.getScoreName(argPlayer1.getPoint()) + "-" + this.getScoreName(argPlayer2.getPoint());
+        	BiFunction<Player, Player, String> getGamScoreName = (Player argPlayer1, Player argPlayer2) -> this.getScoreName(argPlayer1.getPoint()) + "-" + this.getScoreName(argPlayer2.getPoint());
         	
             return getGamScoreName.apply(this.player1, this.player2);
         }
@@ -60,11 +59,9 @@ public class HardTennisGame extends TennisGame {
     
     private String getGameFinishScoreName(Player player1, Player player2) {
     	
-    	BiFunction<Player, Player, Integer> getPointDifference = (Player argPlayer1, Player argPlayer2) -> 
-    														Math.abs(argPlayer1.getPoint() - argPlayer2.getPoint());
+    	BiFunction<Player, Player, Integer> getPointDifference = (Player argPlayer1, Player argPlayer2) -> Math.abs(argPlayer1.getPoint() - argPlayer2.getPoint());
     																
-    	BiFunction<Player, Player, Player> getWonPlayer = (Player argPlayer1, Player argPlayer2) -> 
-    														argPlayer1.getPoint() > argPlayer2.getPoint() ? argPlayer1 : argPlayer2;
+    	BiFunction<Player, Player, Player> getWonPlayer = (Player argPlayer1, Player argPlayer2) -> argPlayer1.getPoint() > argPlayer2.getPoint() ? argPlayer1 : argPlayer2;
    	
         int minusResult = getPointDifference.apply(player1, player2);
         String wonPlayerName =  getWonPlayer.apply(player1, player2).getPlayerName();
