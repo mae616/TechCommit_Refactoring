@@ -34,7 +34,7 @@ public class HardTennisGame extends TennisGame {
         
         }else {
 
-        	BiFunction<Player, Player, String> getGamScoreName = (Player argPlayer1, Player argPlayer2) -> this.getScoreName(argPlayer1.getPoint()) + "-" + this.getScoreName(argPlayer2.getPoint());
+            BiFunction<Player, Player, String> getGamScoreName = (Player argPlayer1, Player argPlayer2) -> this.getScoreName(argPlayer1.getPoint()) + "-" + this.getScoreName(argPlayer2.getPoint());
         	
             return getGamScoreName.apply(this.player1, this.player2);
         }
