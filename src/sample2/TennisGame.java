@@ -1,7 +1,7 @@
 package sample2;
 
 
-public interface TennisGame {
-    void wonPoint(String playerName);
-    String getScore();
+public abstract class TennisGame {
+    abstract void wonPoint(String playerName);
+    abstract String getScore();
 }
